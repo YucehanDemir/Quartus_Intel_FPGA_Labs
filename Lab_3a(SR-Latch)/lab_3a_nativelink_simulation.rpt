@@ -1,0 +1,95 @@
+Info: Start Nativelink Simulation process
+
+========= EDA Simulation Settings =====================
+
+Sim Mode              :  Gate
+Family                :  cyclonev
+Quartus root          :  d:/quartus/quartus/bin64/
+Quartus sim root      :  d:/quartus/quartus/eda/sim_lib
+Simulation Tool       :  questa intel fpga
+Simulation Language   :  verilog
+Simulation Mode       :  GUI
+Sim Output File       :  lab_3a.vo
+Sim SDF file          :  lab_3a__verilog.sdo
+Sim dir               :  simulation\questa
+
+=======================================================
+
+Info: Starting NativeLink simulation with Questa Intel FPGA software
+Sourced NativeLink script d:/quartus/quartus/common/tcl/internal/nativelink/modelsim.tcl
+Probing transcript
+Questa Intel FPGA Info: # Reading pref.tcl
+Questa Intel FPGA Info: # //  Questa Intel Starter FPGA Edition-64
+Questa Intel FPGA Info: # //  Version 2021.2 win64 Apr 14 2021
+Questa Intel FPGA Info: # //
+Questa Intel FPGA Info: # //  Copyright 1991-2021 Mentor Graphics Corporation
+Questa Intel FPGA Info: # //  All Rights Reserved.
+Questa Intel FPGA Info: # //
+Questa Intel FPGA Info: # //  QuestaSim and its associated documentation contain trade
+Questa Intel FPGA Info: # //  secrets and commercial or financial information that are the property of
+Questa Intel FPGA Info: # //  Mentor Graphics Corporation and are privileged, confidential,
+Questa Intel FPGA Info: # //  and exempt from disclosure under the Freedom of Information Act,
+Questa Intel FPGA Info: # //  5 U.S.C. Section 552. Furthermore, this information
+Questa Intel FPGA Info: # //  is prohibited from disclosure under the Trade Secrets Act,
+Questa Intel FPGA Info: # //  18 U.S.C. Section 1905.
+Questa Intel FPGA Info: # //
+Questa Intel FPGA Info: # do lab_3a_run_msim_gate_verilog.do
+Questa Intel FPGA Info: # if {[file exists gate_work]} {
+Questa Intel FPGA Info: # 	vdel -lib gate_work -all
+Questa Intel FPGA Info: # }
+Questa Intel FPGA Info: # vlib gate_work
+Questa Intel FPGA Info: # vmap work gate_work
+Questa Intel FPGA Info: # Questa Intel Starter FPGA Edition-64 vmap 2021.2 Lib Mapping Utility 2021.04 Apr 14 2021
+Questa Intel FPGA Info: # vmap work gate_work 
+Questa Intel FPGA Info: # Copying d:/quartus/questa_fse/win64/../modelsim.ini to modelsim.ini
+Questa Intel FPGA Info: # Modifying modelsim.ini
+Questa Intel FPGA Info: # 
+Questa Intel FPGA Info: # vlog -vlog01compat -work work +incdir+. {lab_3a.vo}
+Questa Intel FPGA Info: # Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+Questa Intel FPGA Info: # Start time: 02:17:13 on May 30,2023
+Questa Intel FPGA Info: # vlog -reportprogress 300 -vlog01compat -work work "+incdir+." lab_3a.vo 
+Questa Intel FPGA Info: # -- Compiling module lab_3a
+Questa Intel FPGA Info: # 
+Questa Intel FPGA Info: # Top level modules:
+Questa Intel FPGA Info: # 	lab_3a
+Questa Intel FPGA Info: # End time: 02:17:14 on May 30,2023, Elapsed time: 0:00:01
+Questa Intel FPGA Info: # Errors: 0, Warnings: 0
+Questa Intel FPGA Info: # 
+Questa Intel FPGA Info: # vlog -vlog01compat -work work +incdir+D:/quartus_lablari/Lab_3a {D:/quartus_lablari/Lab_3a/lab_3a_testbench.v}
+Questa Intel FPGA Info: # Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+Questa Intel FPGA Info: # Start time: 02:17:14 on May 30,2023
+Questa Intel FPGA Info: # vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/quartus_lablari/Lab_3a" D:/quartus_lablari/Lab_3a/lab_3a_testbench.v 
+Questa Intel FPGA Info: # -- Compiling module lab_3a_testbench
+Questa Intel FPGA Info: # 
+Questa Intel FPGA Info: # Top level modules:
+Questa Intel FPGA Info: # 	lab_3a_testbench
+Questa Intel FPGA Info: # End time: 02:17:14 on May 30,2023, Elapsed time: 0:00:00
+Questa Intel FPGA Info: # Errors: 0, Warnings: 0
+Questa Intel FPGA Info: # 
+Questa Intel FPGA Info: # vsim -t 1ps -L altera_ver -L altera_lnsim_ver -L cyclonev_ver -L lpm_ver -L sgate_ver -L cyclonev_hssi_ver -L altera_mf_ver -L cyclonev_pcie_hip_ver -L gate_work -L work -voptargs="+acc"  lab_3a_testbench
+Questa Intel FPGA Info: # vsim -t 1ps -L altera_ver -L altera_lnsim_ver -L cyclonev_ver -L lpm_ver -L sgate_ver -L cyclonev_hssi_ver -L altera_mf_ver -L cyclonev_pcie_hip_ver -L gate_work -L work -voptargs=""+acc"" lab_3a_testbench 
+Questa Intel FPGA Info: # Start time: 02:17:14 on May 30,2023
+Questa Intel FPGA Info: # ** Note: (vsim-3812) Design is being optimized...
+Questa Intel FPGA Info: # Loading work.lab_3a_testbench(fast)
+Questa Intel FPGA Info: # Loading work.lab_3a(fast)
+Questa Intel FPGA Info: # Loading cyclonev_ver.cyclonev_io_obuf(fast)
+Questa Intel FPGA Info: # Loading cyclonev_ver.cyclonev_io_ibuf(fast)
+Questa Intel FPGA Info: # Loading cyclonev_ver.cyclonev_io_ibuf(fast__1)
+Questa Intel FPGA Info: # Loading cyclonev_ver.cyclonev_lcell_comb(fast)
+Questa Intel FPGA Info: # Loading cyclonev_ver.cyclonev_lcell_comb(fast__1)
+Questa Intel FPGA Info: # Loading cyclonev_ver.cyclonev_lcell_comb(fast__2)
+Questa Intel FPGA Info: # Loading cyclonev_ver.cyclonev_lcell_comb(fast__3)
+Questa Intel FPGA Info: # 
+Questa Intel FPGA Info: # add wave *
+Questa Intel FPGA Info: # view structure
+Questa Intel FPGA Info: # .main_pane.structure.interior.cs.body.struct
+Questa Intel FPGA Info: # view signals
+Questa Intel FPGA Info: # .main_pane.objects.interior.cs.body.tree
+Questa Intel FPGA Info: # run -all
+Questa Intel FPGA Info: write format wave -window .main_pane.wave.interior.cs.body.pw.wf D:/quartus_lablari/Lab_3a/simulation/questa/wave.do
+Questa Intel FPGA Info: write format wave -window .main_pane.wave.interior.cs.body.pw.wf D:/quartus_lablari/Lab_3a/simulation/questa/wave.do
+Questa Intel FPGA Info: # Break key hit
+Questa Intel FPGA Info: # Simulation stop requested.
+Questa Intel FPGA Info: # End time: 02:49:57 on May 30,2023, Elapsed time: 0:32:43
+Questa Intel FPGA Info: # Errors: 0, Warnings: 0
+Info: NativeLink simulation flow was successful

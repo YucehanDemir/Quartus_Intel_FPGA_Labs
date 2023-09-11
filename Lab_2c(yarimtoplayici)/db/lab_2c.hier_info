@@ -1,0 +1,17 @@
+|lab_2c
+SW7_4[0] => _.DATAD
+SW7_4[1] => _.DATAD
+SW7_4[2] => _.DATAD
+SW7_4[3] => _.DATAD
+SW3_0[0] => _.DATAC
+SW3_0[1] => _.DATAC
+SW3_0[2] => _.DATAC
+SW3_0[3] => _.DATAC
+SW8 => _.DATAB
+LEDR[0] << _.SUM_OUT
+LEDR[1] << _.SUM_OUT
+LEDR[2] << _.SUM_OUT
+LEDR[3] << _.SUM_OUT
+carry_out << _.SUM_OUT
+
+

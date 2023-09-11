@@ -1,0 +1,68 @@
+|lab_2f
+SW[0] => SW[0].IN1
+SW[1] => SW[1].IN1
+SW[2] => SW[2].IN1
+SW[3] => SW[3].IN1
+SW[4] => SW[4].IN1
+SW[5] => SW[5].IN1
+HEX0[0] << BCD_to_7seg:BCD_to_7seg_inst0.seg
+HEX0[1] << BCD_to_7seg:BCD_to_7seg_inst0.seg
+HEX0[2] << BCD_to_7seg:BCD_to_7seg_inst0.seg
+HEX0[3] << BCD_to_7seg:BCD_to_7seg_inst0.seg
+HEX0[4] << BCD_to_7seg:BCD_to_7seg_inst0.seg
+HEX0[5] << BCD_to_7seg:BCD_to_7seg_inst0.seg
+HEX0[6] << BCD_to_7seg:BCD_to_7seg_inst0.seg
+HEX1[0] << BCD_to_7seg:BCD_to_7seg_inst1.seg
+HEX1[1] << BCD_to_7seg:BCD_to_7seg_inst1.seg
+HEX1[2] << BCD_to_7seg:BCD_to_7seg_inst1.seg
+HEX1[3] << BCD_to_7seg:BCD_to_7seg_inst1.seg
+HEX1[4] << BCD_to_7seg:BCD_to_7seg_inst1.seg
+HEX1[5] << BCD_to_7seg:BCD_to_7seg_inst1.seg
+HEX1[6] << BCD_to_7seg:BCD_to_7seg_inst1.seg
+
+
+|lab_2f|binary_to_BCD:binary_to_BCD_inst
+bin[0] => BCD0[0].DATAIN
+bin[1] => BCD0[1].DATAIN
+bin[2] => BCD0[2].DATAIN
+bin[3] => BCD0[3].DATAIN
+bin[4] => BCD1[0].DATAIN
+bin[5] => BCD1[1].DATAIN
+BCD1[0] <= bin[4].DB_MAX_OUTPUT_PORT_TYPE
+BCD1[1] <= bin[5].DB_MAX_OUTPUT_PORT_TYPE
+BCD1[2] <= <GND>
+BCD1[3] <= <GND>
+BCD0[0] <= bin[0].DB_MAX_OUTPUT_PORT_TYPE
+BCD0[1] <= bin[1].DB_MAX_OUTPUT_PORT_TYPE
+BCD0[2] <= bin[2].DB_MAX_OUTPUT_PORT_TYPE
+BCD0[3] <= bin[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab_2f|BCD_to_7seg:BCD_to_7seg_inst1
+BCD[0] => Decoder0.IN3
+BCD[1] => Decoder0.IN2
+BCD[2] => Decoder0.IN1
+BCD[3] => Decoder0.IN0
+seg[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+seg[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+seg[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+seg[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+seg[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+seg[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+seg[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab_2f|BCD_to_7seg:BCD_to_7seg_inst0
+BCD[0] => Decoder0.IN3
+BCD[1] => Decoder0.IN2
+BCD[2] => Decoder0.IN1
+BCD[3] => Decoder0.IN0
+seg[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+seg[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+seg[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+seg[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+seg[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+seg[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+seg[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+

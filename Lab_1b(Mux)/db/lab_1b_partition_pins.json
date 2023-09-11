@@ -1,0 +1,65 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "LEDR3_0[0]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDR3_0[1]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDR3_0[2]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDR3_0[3]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDR9",
+					"strict" : false
+				},
+				{
+					"name" : "SW9",
+					"strict" : false
+				},
+				{
+					"name" : "SW7_4[0]",
+					"strict" : false
+				},
+				{
+					"name" : "SW3_0[0]",
+					"strict" : false
+				},
+				{
+					"name" : "SW7_4[1]",
+					"strict" : false
+				},
+				{
+					"name" : "SW3_0[1]",
+					"strict" : false
+				},
+				{
+					"name" : "SW7_4[2]",
+					"strict" : false
+				},
+				{
+					"name" : "SW3_0[2]",
+					"strict" : false
+				},
+				{
+					"name" : "SW7_4[3]",
+					"strict" : false
+				},
+				{
+					"name" : "SW3_0[3]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

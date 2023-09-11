@@ -1,0 +1,12 @@
+|lab_3b
+SW0 => D.IN1
+SW1 => Clk.IN1
+LEDR0 << D_Latch:latch.Q
+
+
+|lab_3b|D_Latch:latch
+D => Q$latch.DATAIN
+Clk => Q$latch.LATCH_ENABLE
+Q <= Q$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+

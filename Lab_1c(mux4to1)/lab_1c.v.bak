@@ -1,0 +1,15 @@
+module lab_1c (
+    input [1:0] U, V, W, X,
+    input [1:0] SW,
+    output reg [1:0] M
+);
+    always @* begin
+        case(SW)
+            2'b00: M = U;
+            2'b01: M = V;
+            2'b10: M = W;
+            2'b11: M = X;
+            default: M = 2'b00; // Default case
+        endcase
+    end
+endmodule

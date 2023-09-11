@@ -1,0 +1,24 @@
+module lab_2b(
+    input [3:0] SW,
+    output reg [6:0] HEX1,
+    output reg [6:0] HEX0
+);
+    
+    // 7-segment display values for 0-9
+    wire [6:0] seven_seg_values[9:0] = '{
+        7'b1000000,  // '0'
+        7'b1111001,  // '1'
+        7'b0100100,  // '2'
+        7'b0110000,  // '3'
+        7'b0011001,  // '4'
+        7'b0010010,  // '5'
+        7'b0000010,  // '6'
+        7'b1011000,  // '7'
+        7'b0000000,  // '8'
+        7'b0011000   // '9'
+    };
+
+    assign HEX1 = SW[3] | SW[2] ? 7'b1111111 : seven_seg_values[SW];
+    
+    assign HEX0 = seven_seg_values[SW[3] | SW[2] ? SW - 4'b1010 : SW];
+endmodule

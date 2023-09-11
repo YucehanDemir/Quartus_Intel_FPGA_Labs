@@ -1,0 +1,12 @@
+|lab_3c
+SW0 => D.IN1
+SW1 => Clock.IN1
+LEDR0 << D_FlipFlop:dff.Q
+
+
+|lab_3c|D_FlipFlop:dff
+D => Q~reg0.DATAIN
+Clock => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

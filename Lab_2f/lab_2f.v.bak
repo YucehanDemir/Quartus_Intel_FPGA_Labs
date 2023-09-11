@@ -1,0 +1,75 @@
+module lab_2f(
+    input [5:0] SW,
+    output [6:0] HEX0, HEX1
+);
+    wire [3:0] BCD1, BCD0;
+    binary_to_BCD binary_to_BCD_inst(
+        .bin(SW),
+        .BCD1(BCD1),
+        .BCD0(BCD0)
+    );
+
+    BCD_to_7seg BCD_to_7seg_inst1(
+        .BCD(BCD1),
+        .seg(HEX1)
+    );
+
+    BCD_to_7seg BCD_to_7seg_inst0(
+        .BCD(BCD0),
+        .seg(HEX0)
+    );
+endmodule
+
+module binary_to_BCD(
+    input [5:0] bin,
+    output [3:0] BCD1, BCD0
+);
+    assign BCD1 = bin[5:4];
+    assign BCD0 = bin[3:0];
+endmodule
+
+module BCD_to_7seg (
+    input [3:0] BCD,
+    output reg [6:0] seg
+);
+    always @(*) begin
+        case(BCD)
+            4'b0000: seg = 7'b0111111; // 0
+            4'b0001: seg = 7'b0000110; // 1
+            4'b0010: seg = 7'b1011011; // 2
+            4'b0011: seg = 7'b1001111; // 3
+            4'b0100: seg = 7'b1100110; // 4
+            4'b0101: seg = 7'b1101101; // 5
+            4'b0110: seg = 7'b1111101; // 6
+            4'b0111: seg = 7'b0000111; // 7
+            4'b1000: seg = 7'b1111111; // 8
+            4'b1001: seg = 7'b1101111; // 9
+            default: seg = 7'b0000000; // Hatalı giriş için
+				endcase
+    end
+endmodule
+
+module binary_to_BCD(
+    input [5:0] bin,
+    output reg [3:0] BCD1, BCD0
+);
+    integer i;
+    reg [6:0] tempBCD;
+    
+    always @(*) begin
+        tempBCD = 7'b0000000;
+        for(i=0; i<6; i=i+1) begin
+            if(tempBCD[6:4] >= 5) begin
+                tempBCD = tempBCD + 7'b0000011;
+            end
+            tempBCD = tempBCD << 1;
+            tempBCD[0] = bin[5-i];
+        end
+        BCD1 = tempBCD[6:4];
+        BCD0 = tempBCD[3:0];
+    end
+endmodule
+
+
+
+

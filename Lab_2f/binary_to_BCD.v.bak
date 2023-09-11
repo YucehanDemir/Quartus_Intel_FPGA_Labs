@@ -1,0 +1,7 @@
+module binary_to_BCD(
+    input [5:0] bin,
+    output [3:0] BCD1, BCD0
+);
+    assign BCD1 = bin[5:4];
+    assign BCD0 = bin[3:0];
+endmodule

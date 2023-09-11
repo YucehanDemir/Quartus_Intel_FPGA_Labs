@@ -1,0 +1,10 @@
+module mux_2to1 (
+    input [3:0] d0,
+    input [3:0] d1,
+    input sel,
+    output reg [3:0] mux_out
+);
+    always @ (*)
+        mux_out = sel ? d1 : d0;
+
+endmodule

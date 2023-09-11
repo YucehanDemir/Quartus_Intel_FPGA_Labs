@@ -1,0 +1,11 @@
+module circuit_A (
+    input [3:0] V,
+    output reg [3:0] A
+);
+    always @(*)
+        if (V < 4'b1010)
+            A = V;
+        else 
+            A = V - 4'b1010;
+
+endmodule

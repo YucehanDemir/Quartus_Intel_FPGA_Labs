@@ -1,0 +1,17 @@
+module lab_1d (
+    input wire [1:0] SW, // The selection inputs
+    output wire [6:0] HEX0 // The outputs for the 7-segment display
+);
+
+    // Behavioral description of the decoder using a case statement
+    always @(*)
+    begin
+        case (SW)
+            2'b00: HEX0 = 7'b1000111; // Code for "d"
+            2'b01: HEX0 = 7'b1111001; // Code for "E"
+            2'b10: HEX0 = 7'b0000110; // Code for "1"
+            2'b11: HEX0 = 7'b0000000; // Code for blank display
+            default: HEX0 = 7'b0000000; // Optional default case
+        endcase
+    end
+endmodule
